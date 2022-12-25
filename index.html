@@ -45,7 +45,13 @@
         <section class="top-color">
             <div class="container-top-color">
                 <h1 class="text"> Effective Solutions for Your Business</h1>
-                <button type="button" class="first-button">Order Service</button>
+                <button type="button" class="first-button" data-modal-open>Order Service</button>
+            </div>
+            <div class="backdrop is-hidden" data-modal>
+                <div class="modal">
+                    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <button type="button" data-modal-close>Close</button>
+                </div>
             </div>
         </section>
         <section class="second-section">
@@ -372,6 +378,7 @@
             </div>
         </div>
     </footer>
+    <script src="./js/modal.js"></script>
 </body>
 
 </html>
