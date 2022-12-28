@@ -504,6 +504,7 @@ padding-bottom: 120px;
     border-color: var(--button-color);
     color: var(--button-color);
 }
+
 .customers-svg {
     fill: currentColor;
 }
