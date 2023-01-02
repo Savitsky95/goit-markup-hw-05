@@ -7,6 +7,9 @@
     --brand-color: #2E2F42;
     --background-color: #FFFFFF;
     --button-color: #4D5AE5;
+    --hover-color: #434455;
+    --white: #F4F4FD;
+    --text-color: #E7E9FC;
 }
 .body {
     font-family: 'Roboto', sans-serif;
@@ -24,21 +27,19 @@ nav {
     background-image: linear-gradient(to right,
             rgba(46, 47, 66, 0.7),
             rgba(46, 47, 66, 0.7)), url("../images/people-office.jpg");
-    background-color: #2E2F42;
+    background-color: var(--brand-color);
     background-size:cover; 
     padding-top: 192px;
     padding-bottom: 192px;
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms;
 }
 .container-top-color {
     width: 492px;
     justify-content: center;
     margin-left: auto;
     margin-right: auto;
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms;
 }
 .text {
-    color: #FFFFFF;
+    color: var(--background-color);
     text-align: center;
     font-weight: 700;
     font-size: 56px;
@@ -60,12 +61,12 @@ nav {
         width: 24px;
         height: 24px;
         border-radius: 100%;
-        background-color: #E7E9FC;
+        background-color: var(--text-color);
         border: 1px solid rgba(0, 0, 0, 0.1);
 }
 .close-bt-father:hover,
 .close-bt-father:focus {
-    background-color: #E7E9FC;
+    background-color: var(--text-color);
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
     border-radius: 100%;
 }
@@ -76,15 +77,13 @@ nav {
     transform: translate(-50%, -50%);
     width: 8px;
     height: 8px;
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms;
 }
 .backdrop.is-hidden {
     opacity: 0;
     pointer-events: none;
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms;
 }
 .secondlogo {
-    color: #F4F4FD;
+    color: var(--white);
     font-family: 'Raleway';
     font-weight: 800;
     font-size: 18px;
@@ -122,15 +121,13 @@ nav {
     border: 0;
     margin-left: auto;
     margin-right: auto;
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.first-button:focus {
+.first-button:focus,
+.first-button:hover {
     background-color: #404BBF;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
-}
-.first-button:hover {
-    background-color: var(--button-color);
     color: var(--background-color);
 }
 
@@ -150,19 +147,18 @@ box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.1
 .interactive:focus,
 .interactive:hover {
     background-color: var(--button-color);
-    color: #FFFFFF;
+    color: var(--background-color);
 }
 .interactive {
-    background-color: #F4F4FD;
+    background-color: var(--white);
     color: var(--button-color);
     cursor: pointer;
     font-weight: 700;
     font-size: 16px;
-    border: 1px solid #E7E9FC;
+    border: 1px solid var(--text-color);
     padding: 12px 24px;
-    border: 1px solid #E7E9FC;
     border-radius: 4px;
-    transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .porfolio-btn:not(:last-child) {
     margin-right: 24px;
@@ -203,8 +199,8 @@ box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.1
     padding: 40px 32px;
     font-size: 16px;
     line-height: 1.5;
-    color: #F4F4FD;
-    background-color: rgba(33, 150, 243, 0.9);
+    color: var(--white);
+    background-color: rgba(77, 90, 229, 0.9);
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms;
     overflow: hidden;
     transform: translateY(100%);
@@ -213,6 +209,7 @@ box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.1
 .card-link {
     display: block;
 }
+
 .card-link:hover .card-text,
 .card-link:focus .card-text {
 opacity: 1;
@@ -228,7 +225,7 @@ transform: translateY(0);
     margin-bottom: 8px;
 }
 .description-container {
-    border: 0.5px solid #F4F4FD;
+    border: 0.5px solid var(--white);
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
     padding-bottom: 32px;
     padding-top: 32px;
@@ -257,13 +254,13 @@ header {
     width: 1158px;
 }
 .contacts {
-    color: #434455;
+    color: var(--hover-color);
     font-weight: 400;
     font-size: 16px;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contacts:hover {
-    color: #434455;
+    color: var(--hover-color);
 }
 
 .contacts:focus {
@@ -280,7 +277,7 @@ header {
     color: var(--brand-color);
 }
 .link-to:hover {
-    color: #434455;
+    color: var(--hover-color);
 }
 .link-to:focus {
     color: var(--button-color)
@@ -291,7 +288,7 @@ header {
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
-    color: #2E2F42;
+    color: var(--brand-color);
     position: relative;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -347,7 +344,7 @@ margin-right: 40px;
     display: flex;
     width: 264px;
     height: 112px;
-    background-color: #F4F4FD;
+    background-color: var(--white);
     border-radius: 4px;
     margin-bottom: 8px;
 }
@@ -374,9 +371,10 @@ margin-right: 40px;
     font-weight: 400;
     font-size: 16px;
     height: 72px;
+    line-height: 1.5;
 }
 .fourth-section {
-    background-color: #F4F4FD;
+    background-color: var(--white);
     padding-top: 120px;
     padding-bottom: 120px;
 }
@@ -393,6 +391,8 @@ margin-right: 40px;
 }
 .container-item {
     background-color: var(--background-color);
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+        border-radius: 0px 0px 4px 4px;
 }
 .our-team {
     font-weight: 700;
@@ -434,7 +434,7 @@ margin-right: 40px;
     height: 40px;
     background-color: var(--button-color);
     border-radius: 50%;
-    transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .tm-item:hover,
 .tm-item:focus {
@@ -496,8 +496,7 @@ padding-bottom: 120px;
     border: 1px solid #8E8F99;
     border-radius: 4px;
     color: #AFB1B8;
-    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .customers-link:hover,
 .customers-link:focus {
@@ -533,7 +532,7 @@ padding-bottom: 120px;
     border-radius: 50%;
     background-color: rgba(255, 255, 255, 0.1);
     display: flex;
-    transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .sm-item:hover,
@@ -554,10 +553,8 @@ padding-bottom: 120px;
     padding-bottom: 100px;
 }
 .footer-text {
-    color: #E7E9FC;
-    font-family: Roboto;
+    color: var(--text-color);
     margin-top: 16px;
-    height: 24px;
 }
 .footer-social-media {
     margin-left: 120px;
